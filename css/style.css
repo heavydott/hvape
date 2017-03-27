@@ -150,7 +150,7 @@ button:focus {
 }
 
 #result table {
-	margin: 25px auto 0;
+	margin: 15px auto 0;
 }
 
 #result table td {
@@ -164,7 +164,7 @@ button:focus {
 #return {
 	border: none;
 	background: #fff;
-	margin-top: 25px;
+	margin-top: 15px;
 	padding: 15px;
 	border-radius: 25px;
 	color: #8E1717;

@@ -55,7 +55,7 @@ button:focus {
 }
 
 #volume-container {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 #vForAroma {
@@ -164,7 +164,7 @@ button:focus {
 #return {
 	border: none;
 	background: #fff;
-	margin-top: 50px;
+	margin-top: 25px;
 	padding: 15px;
 	border-radius: 25px;
 	color: #8E1717;

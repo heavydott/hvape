@@ -115,7 +115,11 @@ $play.on('click', function(e) {
 		var aromaStr = '';
 
 		for(var i = 1; i < res[3].length; i++) {
-			aromaStr += '<p>1. ' + res[3][i] + '</p>';
+			if(i % 2 == 0) {
+				aromaStr += '<p class="even">' + i + '. <b>' + res[3][i] + '</b>dr / <b>' + (Math.round(res[3][i] * 100 / 33) / 100) + '</b>ml</p>';
+			} else {
+				aromaStr += '<p class="odd">' + i + '. <b>' + res[3][i] + '</b>dr / <b>' + (Math.round(res[3][i] * 100 / 33) / 100) + '</b>ml</p>';
+			}
 		}
 
 		$result.html('<table>' +

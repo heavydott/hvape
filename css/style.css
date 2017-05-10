@@ -154,11 +154,19 @@ button:focus {
 }
 
 #result table td {
-	width: 100px;
+	min-width: 100px;
 	padding: 15px;
 	border-radius: 15px;
 	background: #E4E4E4;
 	font-size: 25px;
+}
+
+#result table td .odd {
+	
+}
+
+#result table td .even {
+	color: #4B0C0C;
 }
 
 #return {

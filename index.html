@@ -29,28 +29,31 @@
 					<option value="1000" class="volume-opt v1000">1000</option>
 				</select>
 			</div>
-			<div id="nicbase-container">
-				<p class="cont-title">NICOTINE'S BASE</p>
-				<select id="nicbase">
-					<option disabled>Select nicotine's base</option>
-					<option value="36" class="nicbase-opt n0">36</option>
-					<option selected value="54" class="nicbase-opt n10">54</option>
-					<option value="100" class="nicbase-opt n15">100</option>
-				</select>
-			</div>
-			<div id="nic-container">
-				<p class="cont-title">NICOTINE</p>
-				<select id="nic">
-					<option disabled>Select nicotine</option>
-					<option value="0" class="nic-opt n0">0</option>
-					<option value="10" class="nic-opt n10">1.0</option>
-					<option value="15" class="nic-opt n15">1.5</option>
-					<option selected value="20" class="nic-opt n20">2.0</option>
-					<option value="25" class="nic-opt n25">2.5</option>
-					<option value="30" class="nic-opt n30">3.0</option>
-					<option value="35" class="nic-opt n35">3.5</option>
-					<option value="40" class="nic-opt n40">4.0</option>
-				</select>
+			<div class="nics">
+				<div id="nicbase-container">
+					<p class="cont-title">BASE</p>
+					<select id="nicbase">
+						<option disabled>Select nicotine's base</option>
+						<option value="36" class="nicbase-opt n0">36</option>
+						<option selected value="54" class="nicbase-opt n10">54</option>
+						<option value="100" class="nicbase-opt n15">100</option>
+					</select>
+				</div>
+				<div id="nic-container">
+					<p class="cont-title">NICOTINE</p>
+					<select id="nic">
+						<option disabled>Select nicotine</option>
+						<option value="0" class="nic-opt n0">0</option>
+						<option value="10" class="nic-opt n10">1.0</option>
+						<option value="15" class="nic-opt n15">1.5</option>
+						<option selected value="20" class="nic-opt n20">2.0</option>
+						<option value="25" class="nic-opt n25">2.5</option>
+						<option value="30" class="nic-opt n30">3.0</option>
+						<option value="35" class="nic-opt n35">3.5</option>
+						<option value="40" class="nic-opt n40">4.0</option>
+					</select>
+				</div>
+				<div style="clear: both;"></div>
 			</div>
 			<div id="pgvg-container">
 				<p class="cont-title">PG/VG</p>
@@ -66,9 +69,9 @@
 				</select>
 			</div>
 			<div id="aroma-container">
-				<p class="cont-title">AROMAS</p>
+				<p class="cont-title">AROMAS (Drops for volume)</p>
 				<div id="vForAroma">
-					<p class="drops-for-volume">Drops for volume</p>
+					<!-- <p class="drops-for-volume">Drops for volume</p> -->
 					<button class="dfv-btn dfv-0" value="10">10</button>
 					<button class="dfv-btn dfv-1 on" value="30">30</button>
 					<button class="dfv-btn dfv-2" value="50">50</button>

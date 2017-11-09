@@ -47,11 +47,34 @@ button:focus {
 	/*border-radius: 5px;*/
 }
 
+.nics {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#nicbase-container {
+	float: left;
+	width: 49%;
+}
+
+#nicbase {
+	float: left;
+}
+
+#nic-container {
+	float: right;
+	width: 49%;
+}
+
+#nic {
+	float: right;
+}
+
 #main > div {
 	margin-bottom: 10px;
 }
 
-#main > div > p {
+#main .cont-title {
 	font-size: 16px;
 	color: #ff5a5a;
 	margin-bottom: 5px;

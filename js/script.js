@@ -63,13 +63,14 @@ function preDrawDrops(data) {
 		$('#aroma .aroma-input-1').val(data[0]);
 		for(var i = 1; i < data.length; i++) {
 			$aromaUl.append('<li class="aroma-' + (i + 1) + '">' +
-								'<span class="aroma-span">' + (i + 1) + '.</span>' +
-								'<input type="text" class="aroma-input-' + (i + 1) + '" value="' + data[i] + '" placeholder="input here">' +
+								'<input type="text" class="aroma-input-' + (i + 1) + '" value="' + data[i] + '" placeholder="in">' +
 								'<span class="aroma-span">drops</span>' +
 							'</li>');
 		}
 
-		if(data.length == 5) {
+								// '<span class="aroma-span">' + (i + 1) + '.</span>' +
+
+		if(data.length == 8) {
 			$aromaAdd.attr('disabled', 'disabled');
 		}
 
@@ -92,15 +93,14 @@ $vForAroma.on('click', 'button', function(e) {
 $aromaAdd.on('click', function(e) {
 	var count = $aromaUl.find('li').length;
 
-	if(count < 5) {
+	if(count < 8) {
 		$aromaUl.append('<li class="aroma-' + (count + 1) + '">' +
-							'<span class="aroma-span">' + (count + 1) + '.</span>' +
-							'<input type="text" class="aroma-input-' + (count + 1) + '" placeholder="input here">' +
+							'<input type="text" class="aroma-input-' + (count + 1) + '" placeholder="in">' +
 							'<span class="aroma-span">drops</span>' +
 						'</li>');
 	}
 
-	if(count == 4) {
+	if(count == 7) {
 		$aromaAdd.attr('disabled', 'disabled');
 	}
 });
@@ -120,9 +120,11 @@ function calcDrops() {
 	var $inputs = $('#aroma ul li input[type=text]');
 
 	for(var i = 0; i < $inputs.length; i++) {
-		result[0] += parseInt($inputs[i].value);
+		if(isNumeric(parseInt($inputs[i].value))) {
+			result[0] += parseInt($inputs[i].value);
 
-		result.push(parseInt($inputs[i].value));
+			result.push(parseInt($inputs[i].value));
+		}
 	}
 
 	return result;
@@ -149,8 +151,12 @@ function calc(volume, nic, pgvg, countForAroma) {
 
 	var $inputs = $('#aroma ul li input[type=text]');
 
+	console.log(isNumeric(parseInt('20')));
+
 	for(var i = 0; i < $inputs.length; i++) {
-		dataDrops.push(parseInt($inputs[i].value));
+		if(isNumeric(parseInt($inputs[i].value))) {
+			dataDrops.push(parseInt($inputs[i].value));
+		}
 	}
 
 	// VG
@@ -230,7 +236,7 @@ $play.on('click', function(e) {
 								'<td>' + (Math.round(res[0] * 100) / 100) + '</td>' +
 							'</tr>' +
 							'<tr>' +
-								'<td>Nicotine</td>' +
+								'<td>Nic</td>' +
 								'<td>' + (Math.round(res[1] * 100) / 100) + '</td>' +
 							'</tr>' +
 							'<tr>' +
@@ -239,7 +245,7 @@ $play.on('click', function(e) {
 							'</tr>' +
 							'<tr>' +
 								'<td>Aroma</td>' +
-								'<td>' + aromaStr + '</td>' +
+								'<td style="padding: 5px;">' + aromaStr + '</td>' +
 							'</tr>' +
 						'</table>' +
 						'<button id="return">RETURN</button>');

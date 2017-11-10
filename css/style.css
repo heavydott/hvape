@@ -56,6 +56,10 @@ button:focus {
 	width: 100%;
 }
 
+#main select:hover {
+	background: #4c97d8;
+}
+
 #main select option {
 	text-align: center;
 	border-radius: 0;
